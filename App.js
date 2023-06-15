@@ -5,6 +5,7 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Button } from 'react-native-web';
+import Home from './Home';
 function HomeScreen({navigation}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -25,11 +26,16 @@ function AboutScreen() {
 const Stack = createNativeStackNavigator();
 
 function App() {
+  state={
+    
+  }
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="About" component={AboutScreen} />
+        
       </Stack.Navigator>,
 
       
